@@ -10,8 +10,15 @@ hl.bind(super .. " + C",       hl.dsp.exec_cmd(vars.code))
 hl.bind(super .. " + E",       hl.dsp.exec_cmd(vars.files))
 hl.bind(super .. " + W",       hl.dsp.exec_cmd(vars.browser))
 hl.bind(super .. " + T",       hl.dsp.exec_cmd(vars.torrent))
+hl.bind(super .. " + F",       hl.dsp.exec_cmd(vars.launcher))
 
 hl.bind(super .. " + SHIFT + X", hl.dsp.exec_cmd(home .. "/.local/bin/gdz.sh"))
+hl.bind(super .. " + SHIFT + W", hl.dsp.exec_cmd(vars.wallpaper))
+hl.bind(super .. " + SHIFT + S", hl.dsp.exec_cmd(vars.screenshot))
+
+hl.bind(super .. " + L",         hl.dsp.exec_cmd(vars.lock))
+hl.bind(super .. " + semicolon", hl.dsp.exec_cmd(vars.emoji))
+hl.bind(super .. " + V",         hl.dsp.exec_cmd(vars.clipboard))
 
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
