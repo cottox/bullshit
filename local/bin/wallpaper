@@ -1,0 +1,19 @@
+#!/bin/sh
+
+WALLS_DIR="~/pictures/walls"
+
+if [ ! -d "$WALLS_DIR" ]; then
+    notify-send "walls" "$WALLS_DIR not found"
+    exit 1
+fi
+
+CHOSEN=$(find "$WALLS_DIR" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" -o -iname "*.webp" \) -printf "%f\n" | sort | rofi -dmenu -p "󰸉 " -lines 10)
+
+if [ -n "$CHOSEN" ]; then
+    TARGET="$WALLS_DIR/$CHOSEN"
+
+    if command -v hyprctl >/dev/null 2>&1; then
+        awww img -t none "$TARGET"
+        awww img -t none ",$TARGET"
+    fi
+fi
