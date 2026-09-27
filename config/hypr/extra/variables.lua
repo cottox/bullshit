@@ -14,7 +14,7 @@ return {
   -- etc
   launcher   = "rofi -show drun",
   screenshot = "sh -c 'grim -g \"$(slurp)\" - | wl-copy'",
-  wallpaper  = home .. ".local/bin/wallpaper",
+  wallpaper  = home .. "/.local/bin/wallpaper",
   clipboard  = "",
   lock       = "",
   emoji      = "",
@@ -29,4 +29,3 @@ return {
       please dude
 
 --]]
-
