@@ -11,4 +11,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("hyprctl setcursor bibata 21")
   -- install cursor from https://github.com/ful1e5/Bibata_Cursor and rename it to "bibata", then put it in ~/.local/share/icons
 
+  -- pipewire --
+  hl.exec_cmd("pipewire & wireplumber & pipewire-pulse")
+    
 end)
