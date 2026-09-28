@@ -1,0 +1,66 @@
+configuration {
+    modi:                "drun,run";
+    font:                "JetBrainsMono Nerd Font 10";
+    show-icons:          false;
+    drun-display-format: "{name}";
+}
+
+* {
+    bg:                  #101114;
+    fg:                  #e3e2e6;
+    fg-dim:              #5b5e66;
+    sel-bg:              #273141;
+
+    background-color:    transparent;
+    text-color:          @fg;
+    margin:              0;
+    padding:             0;
+    spacing:             0;
+}
+
+window {
+    background-color:    @bg;
+    width:               360px;
+    padding:             14px;
+    border-color:        @sel-bg;
+}
+
+inputbar {
+    children:            [ entry ];
+    padding:             0 0 8px 0;
+}
+
+entry {
+    placeholder:         "";
+    text-color:          @fg;
+}
+
+listview {
+    lines:               6;
+    fixed-height:        true;
+    scrollbar:           false;
+    spacing:             3px;
+    border:              0;
+}
+
+element {
+    padding:             6px 8px;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color:    transparent;
+    text-color:          @fg-dim;
+}
+
+element selected.normal,
+element selected.active {
+    background-color:    @sel-bg;
+    text-color:          @fg;
+}
+
+element-text {
+    background-color:    transparent;
+    text-color:          inherit;
+    vertical-align:      0.5;
+}
