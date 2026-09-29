@@ -14,7 +14,7 @@ return {
   music      = "yandex-music",  -- russian spotify analogue trust me no russia spying on u [ im not sure ]
 
   -- etc
-  launcher   = "rofi -show drun",
+  launcher   = "pkill rofi || rofi -show drun",
   screenshot = "sh -c 'grim -g \"$(slurp)\" - | wl-copy'",
   wallpaper  = home .. "/.local/bin/wallpapers",
   clipboard  = "cliphist list | rofi -dmenu -p ' ' | cliphist decode | wl-copy", -- sudo pacman -S cliphist wl-clipboard
